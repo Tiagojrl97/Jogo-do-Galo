@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(236, 181, 139);
+  font-weight: 900;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(155, 180, 189, 0.893),
+    rgb(62, 61, 71)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+.popup h1 {
+  font-size: 70px;
+  margin-bottom: 70px;
+  color: rgb(236, 181, 139);
+  font-weight: 700;
+  display: flex;
+}
+.title {
+  font-size: 70px;
+  color: rgb(236, 181, 139);
+  font-weight: 700;
+  margin-bottom: 50px;
+  display: none;
+}
+p {
+  font-size: 15px;
+  color: rgb(236, 181, 139);
+  font-weight: 700;
+}
+
+.tabuleiro {
+  background-color: #fff;
+  height: 400px;
+  width: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 50px;
+  padding: 0;
+  box-shadow: 5px 0px 15px 0px black;
+  margin-bottom: 200px;
+  display: none;
+}
+
+.cell {
+  background: linear-gradient(
+    25deg,
+    rgb(141, 74, 240),
+    rgba(9, 184, 243, 0.893)
+  );
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  cursor: pointer;
+}
+.restart {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 184, 243, 0.893),
+    rgb(104, 21, 228)
+  );
+  color: rgb(236, 181, 139);
+  font-weight: 900;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  padding: 0;
+  border: none;
+  border-radius: 12pt;
+  box-shadow: 5px 0px 15px 0px black;
+  margin-top: -125px;
+  display: none;
+}
+button:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(104, 21, 228),
+    rgba(9, 184, 243, 0.893)
+  );
+  cursor: pointer;
+}
+
+.wins-o {
+  font-size: 24px;
+  color: rgb(236, 181, 139);
+  font-weight: bolder;
+  margin-left: 800px;
+  display: none;
+  align-items: center;
+  position: absolute;
+}
+.wins-x {
+  font-size: 24px;
+  color: rgb(236, 181, 139);
+  font-weight: bolder;
+  margin-left: 800px;
+  margin-top: 150px;
+  display: none;
+  align-items: center;
+  position: absolute;
+}
+.popup {
+  background: linear-gradient(
+    90deg,
+    rgba(155, 180, 189, 0.893),
+    rgb(62, 61, 71)
+  );
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 12vmin;
+  display: flex;
+}
+.newGame {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 184, 243, 0.893),
+    rgb(104, 21, 228)
+  );
+  color: rgb(236, 181, 139);
+  font-weight: 700;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  padding: 0;
+  border: none;
+  border-radius: 12pt;
+  box-shadow: 5px 0px 15px 0px black;
+  position: absolute;
+  margin-top: 100px;
+}
+@media (max-width: 800px) {
+  .tabuleiro {
+    height: 90vw;
+    width: 90vw;
+  }
+
+  .cell {
+    font-size: 15vw;
+  }
+  .popup h1 {
+    font-size: 50px;
+  }
+  .title {
+    margin-top: -100px;
+    font-size: 50px;
+  }
+  .wins-o {
+    font-size: 20px;
+    margin-top: 700px;
+    margin-right: 900px;
+    position: absolute;
+  }
+  .wins-x {
+    font-size: 20px;
+    margin-top: 600px;
+    margin-right: 900px;
+    position: absolute;
+  }
+}
